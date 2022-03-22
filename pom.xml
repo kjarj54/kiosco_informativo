@@ -63,6 +63,12 @@
             <version>19-ea+3</version>
         </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>19-ea+3</version>
+        </dependency>
 
         
         
@@ -168,11 +174,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <!--com.netopyr.reduxfx-->
-            <!--https://search.maven.org/artifact/com.netopyr.reduxfx/reduxfx-jfoenix/0.4.1/jar-->
-            
-                                    
+            </plugin>                                    
         </plugins>
     </build>
 </project>

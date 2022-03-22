@@ -5,25 +5,16 @@
  */
 package cr.ac.una.tarea.controller;
 
-import com.jfoenix.controls.JFXButton;
-import cr.ac.una.tarea.util.FlowController;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.BorderPane;
+
 /**
  * FXML Controller class
  *
  * @author kevin
  */
-public class InicioController extends Controller implements Initializable {
-
-    @FXML
-    private JFXButton btnPasar;
-    @FXML
-    private BorderPane root;
+public class KioscoViewController extends Controller implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -35,13 +26,6 @@ public class InicioController extends Controller implements Initializable {
 
     @Override
     public void initialize() {
-        
-    }
-
-    @FXML
-    private void onActionBtnPasar(ActionEvent event) {
-       FlowController.getInstance().goViewInWindow("PrincipalView");
-       getStage().close();
     }
     
 }

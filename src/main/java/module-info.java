@@ -6,9 +6,11 @@ module cr.ac.una.tarea {
     requires javafx.graphicsEmpty;
     requires java.base;
     requires javafx.media;
+    requires javafx.web;
     
     opens cr.ac.una.tarea to javafx.fxml, com.jfoenix;
-    opens cr.ac.una.tarea.controller to com.jfoenix,javafx.fxml,javafx.media;
+    opens cr.ac.una.tarea.controller to com.jfoenix,javafx.fxml,javafx.media,javafx.web;
+    opens cr.ac.una.tarea.util to com.jfoenix,javafx.fxml,javafx.media;
     
     exports cr.ac.una.tarea;
     exports cr.ac.una.tarea.controller;
