@@ -97,9 +97,10 @@ public class PrincipalViewController extends Controller implements Initializable
         File vidFile = fileChooser.showOpenDialog(null);
         
         if(vidFile != null){
-            media = new Media("file:"+vidFile.getAbsolutePath());
+            media = new Media(vidFile.toURI().toString());
             mediaPlayer = new MediaPlayer(media);
             mediaView.setMediaPlayer(mediaPlayer);
+            mediaPlayer.play();
         }
                
     }
