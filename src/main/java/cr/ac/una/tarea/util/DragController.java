@@ -44,7 +44,7 @@ public class DragController {
         setAnchor = event -> {
             if (event.isPrimaryButtonDown()) {
                 cycleStatus = ACTIVE;
-                anchorX = event.getSceneX();
+                anchorX = event.getSceneX()-300;
                 anchorY = event.getSceneY();
                 mouseOffsetFromNodeZeroX = event.getX();
                 mouseOffsetFromNodeZeroY = event.getY();
@@ -59,7 +59,7 @@ public class DragController {
 
         updatePositionOnDrag = event -> {
             if (cycleStatus != INACTIVE) {
-                target.setTranslateX(event.getSceneX() - anchorX);
+                target.setTranslateX(event.getSceneX()-300 - anchorX);
                 target.setTranslateY(event.getSceneY() - anchorY);
             }
         };
@@ -67,7 +67,7 @@ public class DragController {
         commitPositionOnRelease = event -> {
             if (cycleStatus != INACTIVE) {
                 //commit changes to LayoutX and LayoutY
-                target.setLayoutX(event.getSceneX() - mouseOffsetFromNodeZeroX);
+                target.setLayoutX(event.getSceneX()-300 - mouseOffsetFromNodeZeroX);
                 target.setLayoutY(event.getSceneY() - mouseOffsetFromNodeZeroY);
 
                 //clear changes from TranslateX and TranslateY

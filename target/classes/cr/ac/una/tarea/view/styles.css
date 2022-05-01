@@ -73,6 +73,10 @@
     -fx-background-color: #00C853;
 }
 
+.jfx-btn-colocar{
+    -fx-background-color: #00C853;
+}
+
 .jfx-btn-cancelar{
     -fx-background-color: #ff0007;
 }
@@ -90,6 +94,13 @@
 
 .jfx-buscarbutton > ImageView, .jfx-btnimg-buscar > ImageView{
     -fx-image: url(../resources/Buscar-48.png);
+}
+
+.jfx-btn-guardar > ImageView {
+    -fx-image: url(../resources/Guardar-48.png);
+}
+.jfx-btn-colocar > ImageView {
+    -fx-image: url(../resources/Agregar-48.png);
 }
 
 /************************************
@@ -111,7 +122,16 @@
    -fx-background-color: #66999;
 
 }
+.jfx-fondoTapPane{
+   -fx-background-image:url(../resources/cheems-samurai.gif);
+   -fx-background-position: center center;
+   -fx-background-repeat: no-repeat;
+   -fx-background-attachment: fixed;
+   -fx-background-size: cover;
+   
+   -fx-background-color: #66999;
 
+}
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
