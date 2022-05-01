@@ -18,8 +18,8 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FlowController.getInstance().InitializeFlow(stage,null);
-        stage.getIcons().add(new Image("cr/ac/una/tarea/resources/Agregar-48.png"));
-        stage.setTitle("Una Tarea");
+        stage.getIcons().add(new Image("cr/ac/una/tarea/resources/kiosco.png"));
+        stage.setTitle("UNA Tarea");
         FlowController.getInstance().goViewInWindow("Inicio");
     }
 

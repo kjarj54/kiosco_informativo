@@ -40,7 +40,8 @@ public class InicioController extends Controller implements Initializable {
 
     @FXML
     private void onActionBtnPasar(ActionEvent event) {
-       FlowController.getInstance().goViewInWindow("PrincipalView");
+       FlowController.getInstance().goMain();
+       //FlowController.getInstance().goViewInWindow("Pruebas");
        getStage().close();
     }
     

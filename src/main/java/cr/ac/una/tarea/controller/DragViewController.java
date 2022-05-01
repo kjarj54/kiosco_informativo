@@ -6,6 +6,7 @@
 package cr.ac.una.tarea.controller;
 
 import cr.ac.una.tarea.util.DragController;
+import cr.ac.una.tarea.util.DragResizer;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -50,6 +51,8 @@ public class DragViewController extends Controller implements Initializable {
         
         DragController dragController = new DragController(mediaView, true);
         dragController.isDraggableProperty().bind(isDraggableBox.selectedProperty());
+        
+        
     }    
 
     @Override

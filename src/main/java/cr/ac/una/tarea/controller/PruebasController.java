@@ -5,42 +5,42 @@
  */
 package cr.ac.una.tarea.controller;
 
-import cr.ac.una.tarea.util.AppContext;
+import cr.ac.una.tarea.util.DragResizer;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 
 /**
  * FXML Controller class
  *
- * @author kevin
+ * @author UNA-Audivisuales
  */
-public class KioscoViewController extends Controller implements Initializable {
+public class PruebasController extends Controller implements Initializable {
 
     @FXML
     private AnchorPane root;
-    private MediaView mediaView;
+    @FXML
+    private ImageView imgView;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-       // mediaView = new MediaView();
+        DragResizer dragResizer = new DragResizer(imgView);
+        dragResizer.makeResizable(imgView);
         
-       // root.getChildren().addAll((Node[]) AppContext.getInstance().get("Video"));
-
     }    
 
     @Override
     public void initialize() {
+        
     }
+    
+    
     
 }

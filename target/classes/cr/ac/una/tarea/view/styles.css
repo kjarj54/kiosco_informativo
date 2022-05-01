@@ -1,0 +1,144 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+* {
+    -fx-font-family: Roboto;
+    -fx-base-color-focus: #3aa9bf ;
+    -fx-base-color-unfocus: #a8b9bd ;
+    -fx-base-color-etiquetas:#000000 ;
+    -fx-base-color-titulos: #06576a ;
+    -fx-base-color-error: #CF2626 ;
+    -fx-base-color-id:#00C853 ;
+    -fx-background-size: cover;
+}
+
+.jfx-button{
+    -jfx-button-type: RAISED;
+    -fx-opacity: 0.8;
+    -fx-content-display: left;
+    -fx-text-fill: white;
+    -fx-font-veight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment:CENTER_LEFT;
+}
+
+.jfx-button .jfx-rippler{
+    -jfx-rippler-fill: white;
+}
+
+.jfx-button:hover, .button:hover{
+    -fx-background-color: #10D2DE;
+}
+
+.jfx-button:disabled, button:disabled{
+    -fx-background-color: #cccccc;
+    -fx-opacity: 0.4;
+}
+
+
+
+/************************************
+
+
+            Botones
+
+***********************************/
+
+.jfx-startbutton{
+    -fx-font-size: 20px;
+    -fx-font-veight: bold;
+    -fx-text-fill: white;
+    -fx-content-display: top;
+    -fx-opacity: 0.87;
+    -fx-alignment: CENTER ;  
+    -fx-background-color: #32043E ;   
+}
+
+.jfx-btnimg-salir{
+    -fx-opacity: 0.8;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: contain;
+    -fx-background-color: #f44336;
+    -fx-background-image: url("../resources/Eliminar-48.png");
+    
+}
+
+.jfx-buscarbutton{
+    -fx-background-color: #8fb0ef;
+}
+
+.jfx-btn-guardar{
+    -fx-background-color: #00C853;
+}
+
+.jfx-btn-cancelar{
+    -fx-background-color: #ff0007;
+}
+
+.jfx-btn-quitar{
+    -fx-background-color: #ff0007;
+}
+
+.jfx-btn-quitar > ImageView{
+    -fx-image: url(../resources/Eliminar-48.png);
+}
+.jfx-buscarbutton > ImageView{
+    -fx-image: url(../resources/Buscar-48.png);
+}
+
+.jfx-buscarbutton > ImageView, .jfx-btnimg-buscar > ImageView{
+    -fx-image: url(../resources/Buscar-48.png);
+}
+
+/************************************
+
+
+            Fondos
+
+************************************/
+
+
+
+.jfx-inicioFondo{
+   -fx-background-image:url(../resources/hype-zone-welcome.gif);
+   -fx-background-position: center center;
+   -fx-background-repeat: no-repeat;
+   -fx-background-attachment: fixed;
+   -fx-background-size: cover;
+   -fx-background-size: 100%;
+   -fx-background-color: #66999;
+
+}
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            
+                Etiquetas 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+.jfx-lbl-general{
+    -fx-font-size: 14.0px;
+    -fx-font-fill: -fx-base-color-etiquetas;
+}
+
+.jfx-titulos-label-fondo{
+    -fx-background-color: #2196F3;
+    -fx-opacity: 0.8;
+    -fx-font-size: 24.0px;
+    -fx-padding: 5 0 5 0;
+    -fx-text-fill: white;
+    -fx-font-veigth: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 2, 0.0, 1, 2); 
+}
+
+.jfx-inicios-label{
+    -fx-font-size: 24.0px;
+    -fx-padding: 5 0 5 0;
+    -fx-text-fill: #ffffff;
+    -fx-font-veigth: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 2, 0.0, 1, 2);    
+}

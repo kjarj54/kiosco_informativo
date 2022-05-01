@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="jfx-inicioFondo" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.tarea.controller.InicioController">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnPasar" layoutX="230.0" layoutY="275.0" onAction="#onActionBtnPasar" prefHeight="82.0" prefWidth="141.0" styleClass="jfx-startbutton" text="Iniciar" />
+            <Label layoutX="52.0" layoutY="301.0" styleClass="jfx-inicios-label" text="\@Kevin Arauz" />
+            <Label layoutX="395.0" layoutY="301.0" styleClass="jfx-inicios-label" text="\@Anthony Avila" />
+            <Label layoutX="510.0" layoutY="357.0" styleClass="jfx-inicios-label" text="©℗®™" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
