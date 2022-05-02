@@ -31,7 +31,7 @@ public class PruebasController extends Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        DragResizer dragResizer = new DragResizer(imgView);
+        DragResizer dragResizer = new DragResizer(imgView,null);
         dragResizer.makeResizable(imgView);
         
     }    

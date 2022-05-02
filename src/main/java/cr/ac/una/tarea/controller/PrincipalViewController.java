@@ -219,7 +219,7 @@ public class PrincipalViewController extends Controller implements Initializable
             rootAnchorPane.getChildren().add(imgView);
             
             //Hace Redimencionable el objeto
-            DragResizer dragResizer = new DragResizer(imgView);
+            DragResizer dragResizer = new DragResizer(imgView,null);
             dragResizer.makeResizable(imgView);
             
             Image image = new Image("file:"+ listaImagenes.get(0).getAbsolutePath());
@@ -300,7 +300,7 @@ public class PrincipalViewController extends Controller implements Initializable
             rootAnchorPane.getChildren().add(mediaView);
             
             //Hace Redimencionable el objeto
-            DragResizer dragResizer = new DragResizer(mediaView);
+            DragResizer dragResizer = new DragResizer(mediaView,null);
             dragResizer.makeResizable(mediaView);
             flag1 = true;
         }
@@ -335,7 +335,7 @@ public class PrincipalViewController extends Controller implements Initializable
            rootAnchorPane.getChildren().add(webView);
            
            //Hace Redimencionable el objeto
-            DragResizer dragResizer = new DragResizer(webView);
+            DragResizer dragResizer = new DragResizer(webView,null);
             dragResizer.makeResizable(webView); 
             flag2 = true;
         }               
@@ -377,7 +377,7 @@ public class PrincipalViewController extends Controller implements Initializable
             rootAnchorPane.getChildren().add(laTexto);
             laTexto.setText(txtArea.getText());
             
-            DragResizer dragResizer = new DragResizer(laTexto);
+            DragResizer dragResizer = new DragResizer(laTexto,null);
             dragResizer.makeResizable(laTexto);
             
             imgView.setLayoutX(1);
