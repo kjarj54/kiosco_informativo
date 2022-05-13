@@ -13,6 +13,7 @@ import cr.ac.una.tarea.util.AppContext;
 import cr.ac.una.tarea.util.DragController;
 import cr.ac.una.tarea.util.DragResizer;
 import cr.ac.una.tarea.util.FlowController;
+import cr.ac.una.tarea.util.Formato;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
@@ -107,6 +108,7 @@ public class PrincipalViewController extends Controller implements Initializable
     private Boolean flag1 = false;
     private Boolean flag2 = false;
     private Boolean flag3 = false;
+    
 
 
     

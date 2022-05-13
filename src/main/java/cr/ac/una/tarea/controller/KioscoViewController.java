@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,6 +27,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.scene.text.Text;
 import javafx.scene.web.WebView;
 import javafx.util.Duration;
 
@@ -40,6 +44,7 @@ public class KioscoViewController extends Controller implements Initializable {
     private Media media;
     private File vidFile;
     private MediaPlayer mediaPlayer; 
+    Timeline timeline = new Timeline();
     
     /**
      * Initializes the controller class.
@@ -127,28 +132,43 @@ public class KioscoViewController extends Controller implements Initializable {
 
 ***********************************/
         if((Boolean)AppContext.getInstance().get("banderaLabel") == true){
-            Label label = new Label();
+            Text text = new Text((String) AppContext.getInstance().get("textoDigitado"));
+            
+            /*Label label = new Label();
             label.setMaxHeight((double) AppContext.getInstance().get("txtLabelHeight"));
             label.setMaxWidth((double) AppContext.getInstance().get("txtLabelWidth"));
             label.setLayoutX((double) AppContext.getInstance().get("txtLabelLayoutX"));
             label.setLayoutY((double) AppContext.getInstance().get("txtLabelLayoutY"));
-            label.setText((String) AppContext.getInstance().get("textoDigitado"));
-            root.getChildren().add(label);
-            animacionTexto(label);
+            label.setText((String) AppContext.getInstance().get("textoDigitado"));*/
+            text.prefHeight((double) AppContext.getInstance().get("txtLabelHeight"));
+            text.setLayoutY((double) AppContext.getInstance().get("txtLabelLayoutY"));
+            root.getChildren().add(text);
+            setupAnimation(text);
         }
     }    
 
     
-    public void animacionTexto(Node node){
-        
-        // translate
-        TranslateTransition translate = new TranslateTransition();
-        translate.setNode(node);
-        translate.setDuration(Duration.millis(2000));
-        translate.setCycleCount(TranslateTransition.INDEFINITE);
-        translate.setByX(500);
-        //translate.setAutoReverse(true);
-        translate.play();
+    private void setupAnimation(Text text){
+        // Get width of Pane and Text
+        double paneWidth = root.getPrefHeight();
+        double textWidth = text.getLayoutBounds().getWidth();
+
+        // Define the Durations
+        Duration startDuration = Duration.ZERO;
+        Duration endDuration = Duration.seconds(10);
+
+        // Create the initial and final key frames
+        KeyValue startKeyValue = new KeyValue(text.translateXProperty(), paneWidth);
+        KeyFrame startKeyFrame = new KeyFrame(startDuration, startKeyValue);
+        KeyValue endKeyValue = new KeyValue(text.translateXProperty(), -1.0 * textWidth);
+        KeyFrame endKeyFrame = new KeyFrame(endDuration, endKeyValue);
+
+        // Create the Timeline
+        timeline = new Timeline(startKeyFrame,endKeyFrame);
+        // Let the animation run forever
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        // Play the Animation
+        timeline.play();
     }
         
     @Override
